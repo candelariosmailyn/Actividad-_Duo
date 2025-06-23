@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: radial-gradient(circle, #000000, #000000);
+}
+.container {
+  position: relative;
+  perspective: 1000px;
+}
+.animation {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(39, 125, 133, 0.548), transparent);
+  animation: float 10s infinite ease-in-out;
+  transition: transform 0.1s, box-shadow 0.1s;
+  box-shadow: 0 0 30px rgba(187, 214, 69, 0.9),
+    inset 0 0 40px rgba(93, 215, 249, 0.9);
+}
+.particula {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(240, 242, 207, 0.911);
+  pointer-events: none;
+  animation: particulas-animadas 2s infinite ease-in-out;
+}
+.particula {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(240, 242, 207, 0.911);
+  pointer-events: none;
+  animation: particulas-animadas 2s infinite ease-in-out;
+}
+
+@keyframes particulas-animadas {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(100px -200vw), calc(100px -200vh) scale(0.5));
+    opacity: 0;
+  }
+}
